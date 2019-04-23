@@ -1,0 +1,19 @@
+#page-nav {
+  background-color: #fff;
+  border-bottom: 2px solid #e8e8e8;
+  .content {
+    margin: 0 auto;
+    padding: 1em;
+    text-align: center;
+    a {
+      display: inline-block;
+      margin: 0 1em;
+      color: #333;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+        color: #0f8df1;
+      }
+    }
+  }
+}

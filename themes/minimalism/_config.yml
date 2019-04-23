@@ -1,0 +1,32 @@
+
+# html lang
+language: en
+
+# main menu navigation
+menu:
+  首页: /
+  前端: /front-end
+  后端: /back-end
+  工具: /util
+  爱好: /like
+  关于我: /about
+
+# stylesheets loaded in the <head>
+stylesheets:
+- /css/minimalism.css
+
+# scripts loaded in the end of the body
+scripts:
+- /js/minimalism.js
+
+# development config
+browsersync:
+  logLevel: "warn"
+  ghostMode:
+    scroll: true
+  instanceName: "minimallism"
+  file: [
+    '/layout/*.ejs',
+    '/source/css/*.scss',
+    '/source/js/*.js'
+  ]
