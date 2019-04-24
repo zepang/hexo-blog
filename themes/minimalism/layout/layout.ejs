@@ -27,9 +27,12 @@ pageTitle += ' [ ' + config.title + ' ]';
 
 <%- partial('partials/nav') %>
 
-<div id="content-outer">
-  <div id="content-inner">
-    <%- body %>
+<div id="page-body">
+  <div id="content">
+    <main id="main">
+      <%- body %>
+    </main>
+    <aside id="aside"></aside>
   </div>
 </div>
 

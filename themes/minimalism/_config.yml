@@ -20,13 +20,13 @@ scripts:
 - /js/minimalism.js
 
 # development config
-browsersync:
-  logLevel: "warn"
-  ghostMode:
-    scroll: true
-  instanceName: "minimallism"
-  file: [
-    '/layout/*.ejs',
-    '/source/css/*.scss',
-    '/source/js/*.js'
-  ]
+# browsersync:
+#   logLevel: "warn"
+#   ghostMode:
+#     scroll: true
+#   instanceName: "minimallism"
+#   file: [
+#     '/layout/*.ejs',
+#     '/source/css/*.scss',
+#     '/source/js/*.js'
+#   ]

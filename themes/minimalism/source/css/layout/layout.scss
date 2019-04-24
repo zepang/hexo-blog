@@ -1,0 +1,17 @@
+#page-body {
+  #content {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    #main, #aside {
+      display: inline-block;
+      vertical-align: top;
+    }
+    #main {
+      width: 70%;
+    }
+    #aside {
+      width: 30%;
+    }
+  }
+}

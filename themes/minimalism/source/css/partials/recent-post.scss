@@ -1,0 +1,46 @@
+#posts {
+  h5 {
+    color: $primary;
+  }
+  #post {
+    position: relative;
+    background-color: #fff;
+    min-height: 100px;
+    padding: 1.4em;
+    .cover {
+      display: inline-block;
+      position: absolute;
+      height: 140px;
+    }
+    .info {
+      height: 140px;
+      display: inline-block;
+      vertical-align: top;
+      padding-left: 230px;
+      .content {
+        margin-top: 0.6em;
+        line-height: 1.6;
+        display: inline-block;
+        font-size: 14px;
+        color: #4e4e4e;
+      }
+    }
+    a {
+      display: block;
+      color: #333;
+      font-weight: 400;
+      font-size: 24px;
+      text-decoration: none;
+      &:hover {
+        color: $primary;
+        text-decoration: underline;
+      }
+    }
+    time {
+      display: block;
+      margin-top: .2em;
+      font-size: 13px;
+      color: darken($color: #edf0f5, $amount: 30);
+    }
+  }
+}
