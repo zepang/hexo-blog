@@ -8,16 +8,31 @@
 @import './partials/header.scss';
 @import './partials/nav.scss';
 @import './partials/recent-post.scss';
+@import './partials/footer.scss';
+
 
 html {
   background: #edf0f5
 }
 body {
   margin: 0;
+  color: #333333;
 }
 
 ul,
 li {
   margin: 0;
   padding: 0;
+}
+a {
+  color: #333333;
+  text-decoration: none;
+}
+a:hover {
+  color: $primary;
+  text-decoration: underline;
+}
+a:visited {
+  color: #333333;
+  text-decoration: underline;
 }

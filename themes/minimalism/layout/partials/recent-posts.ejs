@@ -1,20 +1,22 @@
 
 <% if (page.posts.length > 0) { %>
   <div id="posts">
-    <h5>文章列表</h5>
     <% page.posts.sort('date', -1).limit(10).each(post => { %>
       <div id="post">
         <img class="cover" src="<%= post.img%>" alt=""/>
         <div class="info">
-          <a href="<%=url_for(post.path)%>"><%=post.title%></a>
-          <time>
-            <%=date(post.date, "YYYY年MM月DD日")%>
-          </time>
+          <a class="title" href="<%=url_for(post.path)%>"><%=post.title%></a>
           <span class="content">
             <%=truncate(strip_html(post.content), { length: post.assertLength || 120 })%>
           </span>
         </div>
         <hr/>
+        <div class="bottom">
+          <time>
+            <%=date(post.date, "YYYY年MM月DD日")%>
+          </time>
+          <a class="readmore-btn" href="<%= url_for(post.path)%>">阅读全文</a>
+        </div>
       </div>
     <% }); %>
   </div>

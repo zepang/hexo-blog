@@ -1,12 +1,13 @@
 #posts {
-  h5 {
-    color: $primary;
-  }
+  padding: 2em 0;
   #post {
     position: relative;
     background-color: #fff;
     min-height: 100px;
     padding: 1.4em;
+    &:not(:first-child) {
+      margin-top: 1.4em;
+    }
     .cover {
       display: inline-block;
       position: absolute;
@@ -17,30 +18,42 @@
       display: inline-block;
       vertical-align: top;
       padding-left: 230px;
+      a.title {
+        display: block;
+        font-weight: 400;
+        font-size: 24px;
+      }
       .content {
-        margin-top: 0.6em;
+        margin-top: 1em;
         line-height: 1.6;
         display: inline-block;
         font-size: 14px;
         color: #4e4e4e;
       }
     }
-    a {
-      display: block;
-      color: #333;
-      font-weight: 400;
-      font-size: 24px;
-      text-decoration: none;
-      &:hover {
-        color: $primary;
-        text-decoration: underline;
-      }
+    hr {
+      margin: 2em 0 1em;
+      border-color: #edf0f5;
+      transform: scaleY(0.5);
     }
-    time {
-      display: block;
-      margin-top: .2em;
-      font-size: 13px;
-      color: darken($color: #edf0f5, $amount: 30);
+    .bottom {
+      &:after {
+        content: '';
+        clear: both;
+        display: block;
+      }
+      time {
+        font-size: 13px;
+        color: darken($color: #edf0f5, $amount: 30);
+      }
+      .readmore-btn {
+        display: inline-block;
+        float: right;
+        font-size: 13px;
+        &:visited {
+          color: darken($color: #edf0f5, $amount: 30);
+        }
+      }
     }
   }
 }

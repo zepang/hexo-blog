@@ -15,3 +15,17 @@
     }
   }
 }
+
+#paginator {
+  text-align: center;
+  .page-number {
+    display: inline-block;
+    padding: 4px 10px;
+    background-color: #ffffff;
+    cursor: pointer;
+    &:hover {
+      color: #ffffff;
+      background-color: $primary;
+    }
+  }
+}

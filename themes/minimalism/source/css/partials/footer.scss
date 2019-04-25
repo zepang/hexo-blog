@@ -1,0 +1,17 @@
+#page-footer {
+  background-color: #ffffff;
+  padding: 2em 4em;
+  text-align: center;
+  background-image: url('/img/bg.jpg');
+  background-repeat: no-repeat;
+  background-position: 30% 90%;
+  #footer-inner {
+    padding: 1em;
+    color: #b7b5b5;
+    background-color: rgba($color: rgb(238, 236, 236), $alpha: .1);
+    .link {
+      text-decoration: underline;
+      color: $primary;
+    }
+  }
+}

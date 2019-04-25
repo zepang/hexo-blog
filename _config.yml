@@ -3,12 +3,13 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: zepang-blog
 subtitle:
 description:
 keywords:
-author: John Doe
-language:
+author: laizehai
+email: ummlqzp@gmail.com
+language: zh-CN
 timezone:
 
 # URL
