@@ -1,0 +1,27 @@
+<ul class="list">
+  <li>
+    <h4>社交</h4>
+  </li>
+  <li>
+    <h4>搜索</h4>
+    <div class="search-btn">
+      <input type="text" readonly>
+      <span>本地搜索</span>
+    </div>
+  </li>
+  <li>
+    <h4>推荐文章</h4>
+    <%- partial('./recent-posts') %>
+  </li>
+  <li>
+    <h4>归档</h4>
+    <%- list_archives({
+      show_count: true,
+      format: 'YYYY-MM'
+    }) %>
+  </li>
+  <li>
+    <h4>分类</h4>
+    <%- list_tags() %>
+  </li>
+</ul>

@@ -7,8 +7,10 @@
 // partials
 @import './partials/header.scss';
 @import './partials/nav.scss';
+@import './partials/posts.scss';
 @import './partials/recent-post.scss';
 @import './partials/footer.scss';
+@import './partials/aside.scss';
 
 
 html {
@@ -23,6 +25,7 @@ ul,
 li {
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 a {
   color: #333333;

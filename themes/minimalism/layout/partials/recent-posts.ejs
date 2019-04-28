@@ -1,23 +1,12 @@
-
-<% if (page.posts.length > 0) { %>
-  <div id="posts">
-    <% page.posts.sort('date', -1).limit(10).each(post => { %>
-      <div id="post">
-        <img class="cover" src="<%= post.img%>" alt=""/>
-        <div class="info">
-          <a class="title" href="<%=url_for(post.path)%>"><%=post.title%></a>
-          <span class="content">
-            <%=truncate(strip_html(post.content), { length: post.assertLength || 120 })%>
-          </span>
-        </div>
-        <hr/>
-        <div class="bottom">
-          <time>
-            <%=date(post.date, "YYYY年MM月DD日")%>
-          </time>
-          <a class="readmore-btn" href="<%= url_for(post.path)%>">阅读全文</a>
-        </div>
+<ul id="recent-posts">
+  <% page.posts.sort('date', -1).limit(6).each(post => { %>
+    <li style="background-image: url(<%= post.img %>)">
+      <div class="info">
+        <h4><%=truncate(strip_html(post.title), { length: 24 })%></h4>
+        <time>
+          <%=date(post.date, "YYYY年MM月DD日")%>
+        </time>
       </div>
-    <% }); %>
-  </div>
-<% } %>
+    </li>
+  <% }) %>
+</ul>

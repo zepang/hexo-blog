@@ -9,7 +9,7 @@ menu:
   后端: /back-end
   工具: /util
   爱好: /like
-  关于我: /about
+  # 关于我: /about
 
 # stylesheets loaded in the <head>
 stylesheets:
