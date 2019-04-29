@@ -14,6 +14,10 @@ pageTitle +=  config.title ;
 <head>
   <meta charset="UTF-8">
   <title><%=pageTitle%></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.css">
+  <link rel="stylesheet" href="https://cdn.bootcss.com/normalize/8.0.0/normalize.min.css">
   <% if (theme.stylesheets !== undefined && theme.stylesheets.length > 0) { %>
     <!-- stylesheets list from _config.yml -->
     <% theme.stylesheets.forEach(url => { %>
@@ -35,6 +39,7 @@ pageTitle +=  config.title ;
     <aside id="aside">
       <%- partial('partials/aside') %>
     </aside>
+    <div style="height: 200px; font-size: 14px;">123</div>
   </div>
 </div>
 

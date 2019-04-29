@@ -1,5 +1,5 @@
 <ul id="recent-posts">
-  <% page.posts.sort('date', -1).limit(6).each(post => { %>
+  <% site.posts.sort('date', -1).limit(6).each(post => { %>
     <li style="background-image: url(<%= post.img %>)">
       <div class="info">
         <h4><%=truncate(strip_html(post.title), { length: 24 })%></h4>
