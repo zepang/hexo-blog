@@ -36,14 +36,14 @@ pageTitle +=  config.title ;
     <main id="main">
       <%- body %>
     </main>
-    <% if (is_home()) { %> 
-      <aside id="aside">
-        <%- partial('partials/aside') %>
-      </aside>
-    <% } else if (is_post()) {%>
+    <% if (is_post()) { %> 
       <div class="post-toc-wrapper">
         <%- partial('partials/toc') %>
       </div>
+    <% } else {%>
+      <aside id="aside">
+        <%- partial('partials/aside') %>
+      </aside>
     <% }; %>
   </div>
 </div>

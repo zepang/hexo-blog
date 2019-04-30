@@ -4,11 +4,14 @@ language: en
 
 # main menu navigation
 menu:
-  首页: /
-  前端: /front-end
-  后端: /back-end
-  工具: /util
-  爱好: /like
+  - page: 首页
+    url: /
+  - page: 归档
+    url: /archives
+  # 前端: /front-end
+  # 后端: /back-end
+  # 工具: /util
+  # 爱好: /like
   # 关于我: /about
 
 # stylesheets loaded in the <head>
