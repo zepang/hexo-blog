@@ -8,5 +8,22 @@
   p {
     line-height: 1.6;
   }
+  .post-footer {
+    margin-top: 2em;
+    padding: 1em 0;
+    border-top: 1px solid $borderColor;
+    &:after {
+      display: block;
+      content: '';
+      clear: both;
+    }
+    a.prev-btn, a.next-btn {
+      display: inline-block;
+      font-size: 14px;
+    }
+    a.next-btn {
+      float: right;
+    }
+  }
 }
 

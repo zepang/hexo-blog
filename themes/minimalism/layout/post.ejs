@@ -2,5 +2,12 @@
 <article id="post">
   <h1><%=page.title%></h1>
   <%-page.content%>
+  <div class="post-footer">
+    <% if(page.prev){ %>
+      <a class="prev-btn" href="<%- url_for(page.prev.path) %>"><%- page.prev.title %></a>
+    <% } %>
+    <% if(page.next) { %>
+      <a class="next-btn" href="<%- url_for(page.next.path) %>"><%- page.next.title %></a>
+    <% } %>
+  </div>
 </article>
-
