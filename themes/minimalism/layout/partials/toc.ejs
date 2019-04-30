@@ -1,0 +1,7 @@
+<aside id="post-toc">
+  <% if (page.content) { %>
+    <%- toc(page.content, {max_depth: 3}) %>
+  <% } else { %>
+    暂无目录
+  <% } %>
+</aside>

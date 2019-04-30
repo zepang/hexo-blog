@@ -1,0 +1,22 @@
+#post-toc {
+  width: 30%;
+  box-sizing: border-box;
+  min-width: 320px;
+  padding-left: 2em;
+  position: absolute;
+  top: 2em;
+  font-size: 14px;
+  right: 0;
+  .toc {
+    margin: 0;
+    padding: 1em 1em 1em 2em;
+    background-color: #fff;
+    .toc-link {
+      display: inline-block;
+      padding: 0.4em 0;
+    }
+    .toc-child {
+      padding-left: 1em;
+    }
+  }
+}

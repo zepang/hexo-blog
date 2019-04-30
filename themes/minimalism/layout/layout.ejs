@@ -23,7 +23,7 @@ pageTitle +=  config.title ;
     <% theme.stylesheets.forEach(url => { %>
       <link rel="stylesheet" href="<%=url%>">
     <% }); %>
-  <% } %>
+  <% }; %>
 </head>
 <body>
 
@@ -33,18 +33,24 @@ pageTitle +=  config.title ;
 
 <div id="page-body">
   <div id="content">
+    <% if (is_home()) { %> 
+      <aside id="aside">
+        <%- partial('partials/aside') %>
+      </aside>
+    <% } else if (is_post()) {%>
+      <div class="post-toc-wrapper">
+        <%- partial('partials/toc') %>
+      </div>
+    <% }; %>
     <main id="main">
       <%- body %>
     </main>
-    <aside id="aside">
-      <%- partial('partials/aside') %>
-    </aside>
-    <div style="height: 200px; font-size: 14px;">123</div>
+    <div style="height: 200px; font-size: 14px;"><%= is_post() %></div>
   </div>
 </div>
 
 <%- partial('partials/footer') %>
-
+<%= theme.scripts %>
 <% if (theme.scripts !== undefined && theme.scripts.length > 0) { %>
   <!-- scripts list from theme config.yml -->
   <% theme.scripts.forEach(url => { %>

@@ -74,6 +74,7 @@ pagination_dir: page
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: minimalism
+# theme: landscape
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -84,3 +85,4 @@ search:
   path: search.json
   field: post
   content: true
+  
