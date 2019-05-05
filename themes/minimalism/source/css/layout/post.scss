@@ -5,6 +5,36 @@
   box-sizing: border-box;
   line-height: 1.6;
   letter-spacing: .5px;
+  .post-header {
+    padding: 2em 0 ;
+    border-bottom: 1px solid $borderColor;
+    text-align: center;
+    h1 {
+      line-height: 2;
+    }
+    .meta {
+      font-size: 0;
+      .time {
+        display: inline-block;
+        border-right: 1px solid $borderColor;
+        padding: 0 10px;
+        color: #999999;
+        font-size: 14px;
+        margin-right: 10px;
+      }
+      a {
+        display: inline-block;
+        color: $primary;
+        font-size: 14px;
+        &:not(:first-child) {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+  .post-body {
+    padding: 4em 0;
+  }
   p {
     line-height: 1.6;
   }
