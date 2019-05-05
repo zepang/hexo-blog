@@ -6,7 +6,7 @@ language: en
 menu:
   - page: 首页
     url: /
-  - page: 归档
+  - page: 其他
     url: /archives
   # 前端: /front-end
   # 后端: /back-end

@@ -1,0 +1,20 @@
+#archive {
+  padding: 2em;
+  background-color: #fff;
+  aside {
+    h2 {
+      padding-bottom: 1em;
+      margin-bottom: 1em;
+      border-bottom: 1px solid $borderColor;
+    }
+    li {
+      padding: .5em 0;
+      a {
+        color: $primary;
+      }
+    }
+    p {
+      color: #999;
+    }
+  }
+}
