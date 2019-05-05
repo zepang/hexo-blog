@@ -14,14 +14,20 @@
       height: 140px;
     }
     .info {
+      width: 100%;
+      box-sizing: border-box;
       height: 140px;
       display: inline-block;
       vertical-align: top;
       padding-left: 230px;
       a.title {
-        display: block;
+        width: 96%;
+        display: inline-block;
         font-weight: 400;
         font-size: 24px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
       }
       .content {
         margin-top: 1em;

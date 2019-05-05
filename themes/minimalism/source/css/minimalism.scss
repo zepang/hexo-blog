@@ -1,9 +1,6 @@
 // vatiable
 @import './variable.scss';
 
-// response
-@import './response.scss';
-
 // laytout
 @import './layout/layout.scss';
 @import './layout/post.scss';
@@ -20,6 +17,9 @@
 
 // post markdown syntax highlight
 @import './highlight.scss';
+
+// response
+@import './response.scss';
 
 html {
   background: #edf0f5;

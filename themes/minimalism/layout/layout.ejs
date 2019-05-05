@@ -37,9 +37,9 @@ pageTitle +=  config.title ;
       <%- body %>
     </main>
     <% if (is_post()) { %> 
-      <div class="post-toc-wrapper">
+      <aside id="aside" class="post-toc-wrapper">
         <%- partial('partials/toc') %>
-      </div>
+      </aside>
     <% } else {%>
       <aside id="aside">
         <%- partial('partials/aside') %>

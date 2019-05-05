@@ -1,0 +1,118 @@
+@media screen and (min-width: 1200px) {
+  #page-body #content {
+    max-width: 1200px;
+    min-width: 1200px;
+  }
+}
+
+@media screen and (min-width: 1080px) and (max-width: 1200px) {
+  #page-body #content {
+    max-width: 1200px;
+    min-width: 750px;
+    width: 100%;
+    #main {
+      width: 100%;
+      padding-right: 350px;
+    }
+    #aside {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 750px) and (max-width: 1080px) {
+  #page-body #content {
+    max-width: 1080px;
+    min-width: 750px;
+    width: 90%;
+    #main {
+      width: 100%;
+    }
+    #aside {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 768px) {
+  #page-body #content {
+    max-width: 768px;
+    min-width: 600px;
+    width: 90%;
+    #main {
+      width: 100%;
+    }
+    #aside {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 600px) {
+  #page-body #content {
+    max-width: 750px;
+    min-width: 300px;
+    width: 90%;
+    #main {
+      width: 100%;
+    }
+    #aside {
+      display: none;
+    }
+  }
+
+  #posts {
+    #post {
+      img.cover {
+        display: block;
+        position: static;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+      }
+      .info {
+        padding: 2em 0 1em;
+        display: block;
+        height: auto;
+        padding-left: 0px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 300px) {
+  html {
+    min-width: 300px;
+  }
+  #page-body #content {
+    max-width: 750px;
+    min-width: 320px;
+    width: 100%;
+    #main {
+      width: 100%;
+    }
+    #aside {
+      display: none;
+    }
+  }
+
+  #posts {
+    #post {
+      img.cover {
+        display: block;
+        position: static;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+      }
+      .info {
+        padding: 2em 0 1em;
+        display: block;
+        height: auto;
+        padding-left: 0px;
+      }
+    }
+  }
+}

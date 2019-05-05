@@ -1,10 +1,8 @@
-<aside id="post-toc">
-  <div class="post-toc-wrapper">
-    <h4>推荐文章</h4>
-    <% if (page.content) { %>
-      <%- toc(page.content, {max_depth: 3}) %>
-    <% } else { %>
-      暂无目录
-    <% } %>
-  </div>
-</aside>
+<div id="post-toc">
+  <h4>推荐文章</h4>
+  <% if (page.content) { %>
+    <%- toc(page.content, {max_depth: 3}) %>
+  <% } else { %>
+    暂无目录
+  <% } %>
+</div>

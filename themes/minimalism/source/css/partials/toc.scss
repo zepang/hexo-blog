@@ -2,23 +2,18 @@
   width: 30%;
   box-sizing: border-box;
   min-width: 320px;
-  padding-left: 2em;
-  position: absolute;
-  top: 2em;
+  padding: 1em 1em 1em 2em;
+  background-color: #fff;
   font-size: 14px;
-  right: 0;
-  .post-toc-wrapper {
-    padding: 1em 1em 1em 2em;
-    background-color: #fff;
-    >h4 {
-      margin-top: 0;
-      padding-bottom: 0.4em;
-      border-bottom: 1px solid $borderColor;
-    }
+  >h4 {
+    margin-top: 0;
+    padding-bottom: 0.6em;
+    border-bottom: 1px solid $borderColor;
   }
   .toc {
     padding: 0;
     margin: 0;
+    margin-top: 1em;
     .toc-link {
       display: inline-block;
       padding: 0.4em 0;
