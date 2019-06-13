@@ -110,9 +110,16 @@ function stickyPageNav () {
 function stickyPostTocWrapper () {
   stickybits('#aside.post-toc-wrapper', {stickyBitStickyOffset: 73})
 }
+function smoothScrollPost () {
+  new SmoothScroll('#aside.post-toc-wrapper a[href*="#"]', {
+    speed: 300,
+    offset: 100
+  })
+}
 
 window.onload = function () {
   getSearchData()
   stickyPageNav()
   stickyPostTocWrapper()
+  smoothScrollPost()
 }

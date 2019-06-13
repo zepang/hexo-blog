@@ -9,6 +9,12 @@
     margin-top: 0;
     padding-bottom: 0.6em;
     border-bottom: 1px solid $borderColor;
+    a{
+      float: right;
+      color: #0f8df2;
+      font-size: 13px;
+      font-weight: 300
+    }
   }
   .toc {
     padding: 0;

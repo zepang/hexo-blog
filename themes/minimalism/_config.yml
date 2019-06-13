@@ -21,6 +21,7 @@ stylesheets:
 # scripts loaded in the end of the body
 scripts:
 - https://cdn.bootcss.com/stickybits/3.6.6/stickybits.js
+- https://cdn.bootcss.com/smooth-scroll/16.0.3/smooth-scroll.js
 - /js/minimalism.js
 
 # development config
