@@ -1,6 +1,9 @@
 #page-nav {
+  z-index: 99;
   background-color: #fff;
-  border-bottom: 2px solid #e8e8e8;
+  &.js-is-sticky {
+    box-shadow: 0px 1px 4px #ddd;
+  }
   .content {
     margin: 0 auto;
     padding: 1em;

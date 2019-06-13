@@ -1,4 +1,9 @@
 #aside {
+  &.post-toc-wrapper {
+    position: sticky;
+    top: 73px;
+    z-index: 99;
+  }
   ul.list {
     > li {
       background-color: #fff;

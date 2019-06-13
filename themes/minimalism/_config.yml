@@ -20,6 +20,7 @@ stylesheets:
 
 # scripts loaded in the end of the body
 scripts:
+- https://cdn.bootcss.com/stickybits/3.6.6/stickybits.js
 - /js/minimalism.js
 
 # development config

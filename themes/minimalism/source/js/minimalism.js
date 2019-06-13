@@ -104,6 +104,15 @@ function getSearchData () {
   http.send()
 }
 
+function stickyPageNav () {
+  stickybits('#page-nav', {useStickyClasses: true, stickyBitStickyOffset: 0})
+}
+function stickyPostTocWrapper () {
+  stickybits('#aside.post-toc-wrapper', {stickyBitStickyOffset: 73})
+}
+
 window.onload = function () {
   getSearchData()
+  stickyPageNav()
+  stickyPostTocWrapper()
 }
