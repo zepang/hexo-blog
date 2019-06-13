@@ -20,5 +20,8 @@
     "hexo-renderer-scss": "^1.2.0",
     "hexo-renderer-stylus": "^0.3.3",
     "hexo-server": "^0.3.3"
+  },
+  "devDependencies": {
+    "babel-core": "^7.0.0-bridge.0"
   }
 }
