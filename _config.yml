@@ -79,7 +79,9 @@ theme: minimalism
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repo: https://github.com/zepang/zepang.github.io.git
+  branch: master
 
 search: 
   path: search.json
