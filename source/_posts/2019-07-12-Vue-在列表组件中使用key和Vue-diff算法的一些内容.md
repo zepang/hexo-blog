@@ -181,9 +181,9 @@ function updateChildren (parentElm, oldCh, newCh, insertedVnodeQueue, removeOnly
 
 ```
 
-### diff算法
+# diff算法
 
-![](/diff.png)
+{% asset_img diff.png %}
 
 Vue 的diff算法是通过**同层的树节点进行比较而非对树进行逐层搜索遍历的方式**，所以时间复杂度只有O(n)，是一种相当高效的算法。React的算法应该也是类似的原理，因为我目前还没有度过react这方面的内容，所以不太确定。
 
