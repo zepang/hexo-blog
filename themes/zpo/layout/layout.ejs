@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZPO-BLOG</title>
+  <%- css('styles/normalize') %>
+  <%- css('styles/font') %> 
+  <%- css('styles/index') %>
+</head>
+<body>
+  <%- partial('_partial/nav', { menus: theme.menus }) %> 
+  <%- body %>
+  <%- partial('_partial/loading') %> 
+</body>
+</html>

@@ -1,0 +1,17 @@
+menus:
+  Home:
+    url: '/'
+    en: 'Home'
+    cn: '首页'
+  About:
+    url: '/about'
+    en: 'About'
+    cn: '关于'
+  Portfolio:
+    url: '/portfolio'
+    en: 'Portfolio'
+    cn: '案例'
+code: 
+  github: 'https://github.com/zepang'
+  gitee: 'https://gitee.com/zepang'
+favicon: /favicon.png
