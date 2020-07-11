@@ -1,6 +1,40 @@
 <header id="home-header">
   <main>
-    <p>
+    hexo极简主题--minimalism
+  </main>
+</header>
+
+<main class="flex justify-center flex-wrap">
+  <section class="-mt-8 w-4/5 bg-white shadow-sm">
+    <ul class="flex-wrap flex justify-center">
+      <li class="w-full h-32 border-t border-gray-300"></li>
+      <li class="w-full h-32 border-t border-gray-300"></li>
+      <li class="w-full h-32 border-t border-gray-300"></li>
+      <li class="w-full h-32 border-t border-gray-300"></li>
+      <li class="w-full h-32 border-t border-gray-300"></li>
+      <li class="w-full h-32 border-t border-gray-300"></li>
+      <li class="w-full h-32 border-t border-gray-300"></li>
+      <li class="w-full h-32 border-t border-gray-300"></li>
+      <li class="w-full h-32 border-t border-gray-300"></li>
+      <li class="w-full h-32 border-t border-gray-300"></li>
+    </ul>
+    <% if (page.total) { %>
+      <section class="pagination w-full flex justify-center my-4 ">
+        <%- paginator({
+          prev_text: '<i class="iconfont icon-arrowleft"></i>',
+          next_text: '<i class="iconfont icon-arrowright"></i>',
+          mid_size: 2,
+          escape: false
+        }) %>
+      </section>
+    <% } %> 
+  </section> 
+</main>
+
+<footer class="h-24 flex justify-center items-center">
+  <p class="text-base text-gray-500">Copyright &copy; 2020/明创株式会社.tomorrow_c</p>
+</footer>
+    <!-- <p>
       <strong> Hi, </strong> 
       I'm zpo, a front-end developer.
       <br>
@@ -15,6 +49,4 @@
       <br>
       <br>
       <strong>let's get started!</strong>
-    </p>
-  </main>
-</header>
+    </p> -->

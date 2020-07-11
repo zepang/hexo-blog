@@ -12,3 +12,27 @@
     transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
   }
 }
+
+.pagination .page-number
+  display inline-block
+
+.pagination .page-number:not(:last-child)
+  margin-right 6px
+
+.pagination a, .pagination .current {
+    outline: 0;
+    border: 0;
+    background-color: transparent;
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+    line-height: 1.25;
+    border-radius: 0.125rem;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.pagination a:hover, .pagination .current  {
+    background-color: #edf2f7;
+}
+
+.pagination .current 
+  color #00C6AA

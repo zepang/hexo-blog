@@ -5,12 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ZPO-BLOG</title>
   <%- css('styles/normalize') %>
+  <%- css('styles/tailwind') %> 
   <%- css('styles/font') %> 
   <%- css('styles/index') %>
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
 </head>
-<body>
+<body class="bg-gray-200">
   <%- partial('_partial/nav', { menus: theme.menus }) %> 
   <%- body %>
   <%- partial('_partial/loading') %> 
+  <%- js(['javascripts/index']) %> 
 </body>
 </html>
