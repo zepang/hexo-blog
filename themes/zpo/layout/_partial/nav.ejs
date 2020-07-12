@@ -1,5 +1,5 @@
-<nav id="page-nav-wrapper">
-  <ul class="nav-list mt-6 px-10">
+<nav id="page-nav-wrapper" class="w-screen  mt-6">
+  <ul class="nav-list px-10">
     <li class="nav-item">
       <a href="" class="logo text-white">
         <h1 class="text-5xl">zpo.blog</h1>
@@ -10,9 +10,9 @@
         <% const current = menus[menu] %>
         <li class="nav-item">
           <% if (is_current(current.url)) { %>
-            <a href=<%= current.url %> class="text-base inline-block py-2 px-3 mx-1 text-gray-400 is_current"><%= current.cn %></a>
+            <a href=<%= current.url %> class="shadow rounded-full text-base inline-block py-2 px-6 mx-1 text-gray-400 is_current"><%= current.cn %></a>
           <% } else { %>
-            <a href=<%= current.url %> class="text-base inline-block py-2 px-3 mx-1 text-gray-400"><%= current.cn %></a>
+            <a href=<%= current.url %> class="shadow rounded-full text-base inline-block py-2 px-6 mx-1 text-gray-400"><%= current.cn %></a>
           <% } %>
         </li>
       <% } %>

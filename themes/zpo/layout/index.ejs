@@ -9,19 +9,46 @@
   </nav>
 </header>
 
-<main class="flex justify-center flex-wrap">
-  <section class="-mt-8 w-4/5 bg-white shadow-sm">
-    <ul class="flex-wrap flex justify-center">
-      <li class="w-full h-32 border-t border-gray-300"></li>
-      <li class="w-full h-32 border-t border-gray-300"></li>
-      <li class="w-full h-32 border-t border-gray-300"></li>
-      <li class="w-full h-32 border-t border-gray-300"></li>
-      <li class="w-full h-32 border-t border-gray-300"></li>
-      <li class="w-full h-32 border-t border-gray-300"></li>
-      <li class="w-full h-32 border-t border-gray-300"></li>
-      <li class="w-full h-32 border-t border-gray-300"></li>
-      <li class="w-full h-32 border-t border-gray-300"></li>
-      <li class="w-full h-32 border-t border-gray-300"></li>
+<main class="flex relative justify-center flex-wrap">
+  <section class="posts-section rounded -mt-8 w-4/5 py-10 px-12 bg-white shadow-sm">
+    <ul class="posts flex-wrap flex justify-center">
+      <% page.posts.each(function (post, index) { %>
+        <% const image = "https://dummyimage.com/240/160/d6cfd6.png" %>
+        <li class="post w-full h-40 mb-10">
+          <div class="cover rounded float-left h-full bg-gray-400 shadow-sm">
+            <img src=<%= image %> class="rounded w-full h-full" alt="">
+          </div>
+          <div class="info h-full pl-6 overflow-hidden flex flex-wrap flex-col">
+            <a title=<%= post.title %> href="" class="title block w-full font-bold text-2xl"><%= post.title %> </a>
+            <% var excerpt = '' %>
+            <% if(post.excerpt) { %>
+              <% excerpt = strip_html(post.excerpt).substr(0, 200) %>
+            <% } else { %>
+              <% excerpt = strip_html(post.content).substr(0, 200) %>
+            <% } %>
+            <div title=<%= excerpt %> class="desc block w-full mt-2 mb-auto text-gray-600 text-base leading-relaxed tracking-wider font-medium"><%= excerpt %></div>
+            <div class="flex text-gray-600 text-base font-medium">
+              <div class="date"><%- date(post.date) %></div>
+              <% if(post.categories.length > 0) { %>
+                <div class="post-meta">
+                  <i class="iconfont icon-category"></i>
+                  <% post.categories.each(function(cate){ %>
+                    <a href="<%= url_for(cate.path) %>"><%- cate.name %></a>
+                  <% }) %>
+                </div>
+              <% } %>
+              <% if(post.tags.length > 0) { %>
+                <div class="post-meta">
+                  <i class="iconfont icon-tags"></i>
+                  <% post.tags.each(function(tag){ %>
+                    <a href="<%= url_for(tag.path) %>"><%- tag.name %></a>
+                  <% }) %>
+                </div>
+              <% } %>
+            </div>
+          </div>
+        </li>
+      <% }) %>    
     </ul>
     <% if (page.total) { %>
       <section class="pagination w-full flex justify-center my-4 ">

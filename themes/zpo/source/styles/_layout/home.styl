@@ -9,3 +9,23 @@
   nav 
     bottom 16%
     right 3%
+
+.posts
+  .post  
+    .cover
+      min-width 240px
+    .info
+      a.title 
+        overflow: hidden; 
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        color: #192125
+        &:hover
+          color: #00C6AA
+      .desc
+        word-break: break-all;
+        overflow : hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
