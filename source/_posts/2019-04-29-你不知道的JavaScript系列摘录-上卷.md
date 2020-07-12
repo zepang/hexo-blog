@@ -1,6 +1,6 @@
 ---
 title: 你不知道的JavaScript系列摘录-上卷
-img: 'https://placem.at/places?h=140'
+img: "https://dummyimage.com/240/160/d6cfd6.png"
 date: 2019-04-29 11:53:49
 categories:
 ---

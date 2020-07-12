@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ZPO-BLOG</title>
   <%- css('styles/normalize') %>
   <%- css('styles/tailwind') %> 
   <%- css('styles/font') %> 
   <%- css('styles/index') %>
+  <!-- <%- css('styles/highlight') %>  -->
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
 </head>
-<body class="bg-gray-200">
+<body class="bg-gray-200 w-full">
   <%- partial('_partial/nav', { menus: theme.menus }) %> 
   <%- body %>
+  <%- partial('_partial/footer') %> 
   <%- partial('_partial/loading') %> 
   <%- js(['javascripts/index']) %> 
 </body>
