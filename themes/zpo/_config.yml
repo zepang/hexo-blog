@@ -3,6 +3,14 @@ menus:
     url: '/'
     en: 'Home'
     cn: '首页'
+  Archive:
+    url: '/archive'
+    en: 'Archive'
+    cn: '归档'
+  Category:
+    url: '/category'
+    en: 'Category'
+    cn: '分类'
   About:
     url: '/about'
     en: 'About'
