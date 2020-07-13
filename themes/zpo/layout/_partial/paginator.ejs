@@ -1,0 +1,10 @@
+<% if (page.total) { %>
+  <section class="pagination w-full flex justify-center my-8 ">
+    <%- paginator({
+      prev_text: '<i class="iconfont icon-arrowleft"></i>',
+      next_text: '<i class="iconfont icon-arrowright"></i>',
+      mid_size: 2,
+      escape: false
+    }) %>
+  </section>
+<% } %> 

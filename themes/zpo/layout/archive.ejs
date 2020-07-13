@@ -1,16 +1,20 @@
 <%- partial('_partial/header') %> 
-<main class="flex justify-center bg-white w-full items-center">
-  <ul class="max-w-screen-lg w-3/5 pb-12 pt-4 px-12 shadow-sm">
+<main id="archives-page" class="flex flex-col justify-center bg-white w-full items-center">
+  <ul class="max-w-screen-lg w-4/5 pb-12 pt-4 px-12 shadow-sm">
     <% var year = 0 %> 
-    <% site.posts.sort('date', -1).each(function (post) { %>
+    <% page.posts.sort('date', -1).each(function (post) { %>
      <% if(date(post.date, "YYYY") && date(post.date, "YYYY") !== year) { %>
         <% year = date(post.date, "YYYY") %> 
-        <h3 class="my-8 text-xl pb-4 border-b border-gray-300"><%= date(post.date, "YYYY") %></h3>
+        <% var archiveYear = '/archives/' +  date(post.date, "YYYY")%> 
+        <a href=<%- url_for(archiveYear) %>  class="block mt-8 mb-4 font-bold text-xl pb-4 border-b border-gray-300"><%= date(post.date, "YYYY") %></a>
      <% } %>
-     <li class="mb-4">
-        <span class="text-gray-600"><%= date(post.date, 'MM-DD') %> </span>
-        <a class="inline-block pl-4" href=""><%= post.title %></a>
+     <li class="flex rounded">
+        <a class="inline-block flex-1 py-2 pl-8" href=<%- url_for(post.path) %> >
+          <span class="inline-block mr-4 text-gray-600"><%= date(post.date, 'MM-DD') %> </span>
+          <span class="font-medium"><%= post.title %></span>
+        </a>
      </li>
    <% }) %> 
   </ul>
+  <%- partial('_partial/paginator') %> 
 </main>
