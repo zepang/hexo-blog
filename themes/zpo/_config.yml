@@ -4,7 +4,7 @@ menus:
     en: 'Home'
     cn: '首页'
   Archive:
-    url: '/archive'
+    url: '/archives'
     en: 'Archive'
     cn: '归档'
   Category:
