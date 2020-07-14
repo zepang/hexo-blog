@@ -1,5 +1,28 @@
 <%- partial('_partial/header') %> 
+<% var current = 0 %> 
 <main id="archives-page" class="flex flex-col justify-center bg-white w-full items-center">
+  <section class="tabs-section flex justify-center items-center">
+    <nav id="tabs" class="tabs flex justify-between items-center py-2"> 
+      <span class="tab inline-block py-4 mx-8 is_active" data-tab="0">日期</span>
+      <span class="tab inline-block py-4 mx-8" data-tab="1">分类</span>
+      <span class="tab inline-block py-4 mx-8" data-tab="2">标签</span>
+    </nav>
+  </section>
+  <script>
+    var tabs = document.getElementById('tabs')
+    tabs.addEventListener('click', e => {
+      var tab = e.target.dataset.tab && Number(e.target.dataset.tab)
+      if(isNaN(tab)) return
+      var children = [...tabs.children]
+      children.forEach((child, i) => {
+        if (i === tab) {
+          child.classList.add('is_active')
+        } else {
+          child.classList.remove('is_active')
+        }
+      })
+    })
+  </script>
   <ul class="max-w-screen-lg w-4/5 pb-12 pt-4 px-12 shadow-sm">
     <% var year = 0 %> 
     <% page.posts.sort('date', -1).each(function (post) { %>
