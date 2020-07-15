@@ -1,0 +1,14 @@
+<div class="meta flex mt-4">
+  <div class="date mr-3">
+    时间：
+    <time datetime="<%= full_date(page.date, 'YYYY-MM-DD HH:mm') %>">
+      <%= full_date(page.date, 'YYYY-MM-DD HH:mm') %>
+    </time>
+  </div>
+  <div class="word-count mr-3">
+    <span>字数：<%- wordcount(page.content) %> </span>
+  </div>
+  <div class="read-time">
+    <span>阅读：<%- min2read(page.content) %>min </span>
+  </div>
+</div>

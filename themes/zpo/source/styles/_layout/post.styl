@@ -11,11 +11,15 @@
         white-space: nowrap;
 
 #post-toc
-  width 200px
-  position: sticky;
-  top: 20px;
+  min-width 200px
+  position sticky
+  top 60px
   .toc-child
-    padding .5em 0 .5em 1em
+    padding .5em 0 
+  .toc-text
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    white-space: nowrap;
   .toc-text, .toc-number 
     font-size 14px
     color #192125

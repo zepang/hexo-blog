@@ -1,11 +1,59 @@
-<header class="text-white w-full flex flex-col justify-center items-center" style="height: 60vh;background-color: #192125;">
-  <% if (is_archive()) { %> 
-    <h1 class="text-3xl">
-      归档页面 
-    </h1>
-  <% } else if (is_current('/tags', false)) { %> 
-    <h1 class="text-3xl">
-      标签页面 
-    </h1>
-  <% } %> 
+<% var headerClass = 'default-header' %> 
+<% if (is_home()) { %> 
+  <% headerClass = 'home-header' %>   
+  <% page.typedTitle = 'Hexo极简博客主题--minimalism' %> 
+<% } %> 
+<% if (is_post()) { %> 
+  <% headerClass = 'post-header'  %>   
+  <% page.typedTitle = page.title %> 
+<% } %> 
+<% if (is_archive()) { %> 
+  <% headerClass = 'archive-header' %>   
+  <% page.typedTitle = '归档页面' %> 
+<% } %> 
+<header class="relative text-white w-full flex flex-col justify-center items-center  <%= headerClass %>" style="background-color: #192125;">
+  <div class="typed-title font-mediumn text-3xl">
+    <span id="typed-title">
+      <% if (is_home()) { %> 
+        Hexo极简博客主题--minimalism
+      <% } else if (is_post()) { %> 
+        <%= page.title %> 
+      <% } else if (is_archive()) { %> 
+        归档页面 
+      <% } %> 
+    </span>
+  </div>
+  <% if (is_post()) { %>
+    <%- partial("_partial/post-meta") %> 
+  <% } %>  
+  <% if (is_home()) { %>
+    <nav class="absolute right-0 bottom-0 p-8">
+      <a href="" title="wechat" class="block my-4 text-sm text-white">
+        <i class="iconfont icon-github"></i>
+      </a>
+      <a href="" title="wechat" class="block my-4 text-sm text-white">
+        <i class="iconfont icon-wechat"></i>
+      </a>
+      <a href="" title="wechat" class="block my-4 text-sm text-white">
+        <i class="iconfont icon-qq"></i>
+      </a>
+    </nav>
+  <% } %>  
 </header>
+
+<script>
+  var typed = new Typed('#typed-title', {
+    // "<%- page.typedTitle %>&nbsp;",
+    strings: [
+      '12344444'
+    ],
+    cursorChar: "_",
+    typeSpeed: 40,
+    loop: false,
+  });
+  typed.stop();
+  setTimeout(() => {
+      console.log(typed)
+      typed.start();
+    }, 2000)
+</script>

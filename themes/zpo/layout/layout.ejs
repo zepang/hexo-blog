@@ -7,11 +7,12 @@
   <%- css('styles/tailwind') %> 
   <%- css('styles/font') %> 
   <%- css('styles/index') %>
-  <!-- <%- css('styles/highlight') %>  -->
-  <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+  <%- js('javascripts/typed.js@2.0.11') %> 
+  <link rel="stylesheet" href="http://at.alicdn.com/t/font_1946622_pfrkpyhdpn.css">
 </head>
 <body class="bg-gray-200 w-full">
   <%- partial('_partial/nav', { menus: theme.menus }) %> 
+  <%- partial('_partial/header') %> 
   <%- body %>
   <%- partial('_partial/footer') %> 
   <%- partial('_partial/loading') %> 

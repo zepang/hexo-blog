@@ -7,18 +7,6 @@ menus:
     url: '/archives'
     en: 'Archive'
     cn: '归档'
-  Tag:
-    url: '/tags'
-    en: 'Tag'
-    cn: '标签'
-  About:
-    url: '/about'
-    en: 'About'
-    cn: '关于'
-  Portfolio:
-    url: '/portfolio'
-    en: 'Portfolio'
-    cn: '案例'
 code: 
   github: 'https://github.com/zepang'
   gitee: 'https://gitee.com/zepang'

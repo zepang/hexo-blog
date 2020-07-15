@@ -1,54 +1,37 @@
-<header class="text-white w-full flex flex-col justify-center items-center" style="height: 60vh;background-color: #192125;">
-  <h1 class="text-3xl">
-    <%= page.title %> 
-  </h1>
-  <div class="meta flex mt-4">
-    <div class="date mr-3">
-      时间：
-      <time datetime="<%= full_date(page.date, 'YYYY-MM-DD HH:mm') %>">
-        <%= full_date(page.date, 'YYYY-MM-DD HH:mm') %>
-      </time>
-    </div>
-    <div class="word-count mr-3">
-      <span>字数：<%- wordcount(page.content) %> </span>
-    </div>
-    <div class="read-time">
-      <span>阅读：<%- min2read(page.content) %>min </span>
-    </div>
-  </div>
-</header>
-<main class="flex w-full justify-center bg-white">
-  <aside>
-    <div id="post-toc" class="px-3 py-4 mt-8 border-r border-gray-300">
-      <h4 class="text-xl mb-2">文章目录<a href="#">回到顶部</a></h4>
-      <% if (page.content) { %>
-        <%- toc(page.content, {max_depth: 3}) %>
-      <% } else { %>
-        暂无目录
-      <% } %>
-    </div>
-  </aside>
-  <article class="markdown-article max-w-screen-lg w-4/5 py-12 px-12 bg-white">
-    <%- markdown(page.content) %>
-    <footer class="flex mt-12 justify-between">
-      <div class="post-prev flex-1">
-        <% const prev = page.prev %>
-        <% if (prev) { %>
-          <a href="<%= url_for(prev.path) %>">
-            上一篇：
-            <%= prev.title %>
-          </a>
+<main class="relative w-full flex justify-center ">
+  <section class="flex w-4/5 px-10 -mt-12 rounded justify-center items-stretch shadow-sm bg-white">
+    <aside class="border-r border-gray-300">
+      <div id="post-toc" class="py-4 mt-8">
+        <h4 class="text-xl mb-2"><a href="#">Top：文章目录</a></h4>
+        <% if (page.content) { %>
+          <%- toc(page.content, {max_depth: 3}) %>
+        <% } else { %>
+          暂无目录
         <% } %>
       </div>
-      <div class="post-next flex-1">
-        <% const next = page.next %>
-        <% if (next) { %>
-          <a href="<%= url_for(next.path) %>">
-            下一篇：
-            <span><%- next.title %></span>
-          </a>
-        <% } %>
-      </div>
-    </footer>
-  </article>
+    </aside>
+    <article class="markdown-article max-w-screen-lg flex-1 py-12 pl-8 bg-white">
+      <%- markdown(page.content) %>
+      <footer class="flex mt-12 justify-between">
+        <div class="post-prev flex-1">
+          <% const prev = page.prev %>
+          <% if (prev) { %>
+            <a href="<%= url_for(prev.path) %>">
+              上一篇：
+              <%= prev.title %>
+            </a>
+          <% } %>
+        </div>
+        <div class="post-next flex-1">
+          <% const next = page.next %>
+          <% if (next) { %>
+            <a href="<%= url_for(next.path) %>">
+              下一篇：
+              <span><%- next.title %></span>
+            </a>
+          <% } %>
+        </div>
+      </footer>
+    </article>
+  </section>
 </main>
