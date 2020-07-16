@@ -1,0 +1,56 @@
+#search-local 
+  display none
+  position fixed
+  top 0
+  right 0
+  bottom 0
+  left 0
+  z-index 999
+  background-color rgba(0,0,0,.4)
+  .search-box 
+    margin 12% auto 0
+    .search-input 
+      width 100%
+      height 50px
+      padding 0 1em
+      box-sizing border-box
+      &:focus 
+        outline none
+      
+    
+    .search-result 
+      max-height 400px
+      background-color #fff
+      overflow-y auto
+      .search-item 
+        display block
+        width 100%
+        padding 1em
+        &:not(last-child) 
+          border-bottom 1px solid #e2e8f0
+        
+        .search-item-title 
+          overflow hidden
+          text-overflow ellipsis
+          white-space nowrap
+          font-size 17px
+          font-weight 500
+        
+        .search-item-content 
+          padding 10px 0 0 0
+          margin 0
+          font-size 14px
+          color #666
+          line-height 1.6
+        
+        .search-keyword 
+          text-decoration underline
+          text-decoration-color highlight-color
+          font-weight bolder
+          color highlight-color
+          padding 0 6px
+          border-radius 4px
+        
+      
+    
+  

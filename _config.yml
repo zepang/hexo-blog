@@ -99,3 +99,8 @@ theme: zpo
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: ''
+
+search: 
+  path: search.json
+  field: post
+  content: true
