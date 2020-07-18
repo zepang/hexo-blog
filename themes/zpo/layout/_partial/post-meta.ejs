@@ -1,14 +1,35 @@
-<div class="meta flex mt-4">
+<div class="meta flex flex-wrap justify-center">
   <div class="date mr-3">
+    <i class="iconfont icon-date"></i>
     时间：
     <time datetime="<%= full_date(page.date, 'YYYY-MM-DD HH:mm') %>">
-      <%= full_date(page.date, 'YYYY-MM-DD HH:mm') %>
+      <%= full_date(post.date, 'YYYY-MM-DD HH:mm') %>
     </time>
   </div>
-  <div class="word-count mr-3">
-    <span>字数：<%- wordcount(page.content) %> </span>
-  </div>
-  <div class="read-time">
-    <span>阅读：<%- min2read(page.content) %>min </span>
-  </div>
+  <% if(post.categories.length > 0) { %>
+    <div class="mr-3">
+      <i class="iconfont icon-classify"></i>
+      <% post.categories.slice(0,2).each(function(cate){ %>
+        <a href="<%= url_for(cate.path) %>"><%- cate.name %></a>
+      <% }) %>
+    </div>
+  <% } %>
+  <% if(post.tags.length > 0) { %>
+    <div class="mr-3">
+      <i class="iconfont icon-tag"></i>
+      <% post.tags.slice(0,2).each(function(tag){ %>
+        <a href="<%= url_for(tag.path) %>"><%- tag.name %></a>
+      <% }) %>
+    </div>
+  <% } %>
+  <% if (is_post()) { %> 
+    <div class="word-count mr-3">
+      <i class="iconfont icon-count"></i>
+      <span>字数：<%- wordcount(page.content) %> </span>
+    </div>
+    <div class="read-time mr-3">
+      <i class="iconfont icon-time"></i>
+      <span>阅读：<%- min2read(page.content) %>min </span>
+    </div>
+  <% } %> 
 </div>

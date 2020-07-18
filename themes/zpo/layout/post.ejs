@@ -1,7 +1,7 @@
-<main class="relative w-full flex justify-center ">
-  <section class="flex w-4/5 px-10 -mt-12 rounded justify-center items-stretch shadow-sm bg-white">
-    <aside class="border-r border-gray-300">
-      <div id="post-toc" class="py-4 mt-8">
+<main class="relative w-full flex justify-center" id="post-page">
+  <section class="flex w-4/5 md:pr-4 lg:pr-10 py-12 -mt-12 rounded justify-between items-stretch shadow-sm bg-white">
+    <aside id="post-aside" class="border-r border-gray-300 md:pl-4 lg:pl-10">
+      <div id="post-toc" class="pb-6">
         <h4 class="text-xl mb-2"><a href="#">Top：文章目录</a></h4>
         <% if (page.content) { %>
           <%- toc(page.content, {max_depth: 3}) %>
@@ -10,7 +10,10 @@
         <% } %>
       </div>
     </aside>
-    <article class="markdown-article max-w-screen-lg flex-1 py-12 pl-8 bg-white">
+    <div class="flex items-center">
+      <span id="toc-toggle-btn" class="bg-gray-300 text-gray-700 py-2 rounded-r text-sm" style="writing-mode:tb-rl; cursor: pointer;">目录</span>
+    </div>
+    <article class="markdown-article max-w-screen-lg min-w-0 flex-1 md:pl-6 lg:pl-8 bg-white">
       <%- markdown(page.content) %>
       <footer class="flex mt-12 justify-between">
         <div class="post-prev flex-1">
@@ -35,3 +38,26 @@
     </article>
   </section>
 </main>
+
+<script>
+  window.addEventListener('load', function () {
+    var tocToggleBtn = document.getElementById('toc-toggle-btn')
+    var postAside = document.getElementById('post-aside')
+    var postToc = document.getElementById('post-toc')
+    postAside.addEventListener('transitionend', function () {
+      if (postAside.classList.contains('hide')) {
+        postToc.style.display = 'none'
+      } else {
+        postToc.style.display = ''
+      }
+    })
+    tocToggleBtn.addEventListener('click', function (e) {
+      if (postAside.classList.contains('hide')) {
+        postAside.classList.remove('hide')
+      } else {
+        postToc.style.display = 'none'
+        postAside.classList.add('hide')
+      }
+    })
+  })
+</script>

@@ -12,19 +12,16 @@
   <% page.typedTitle = '归档页面' %> 
 <% } %> 
 <header class="relative text-white w-full flex flex-col justify-center items-center  <%= headerClass %>" style="background-color: #192125;">
-  <div class="typed-title font-mediumn text-3xl">
-    <span id="typed-title">
-      <% if (is_home()) { %> 
-        Hexo极简博客主题--minimalism
-      <% } else if (is_post()) { %> 
-        <%= page.title %> 
-      <% } else if (is_archive()) { %> 
-        归档页面 
-      <% } %> 
-    </span>
+  <div class="typed-title-wrapper font-mediumn text-3xl">
+    <span id="typed-title"></span>
+    <div id="typed-strings">
+      <p><%= page.typedTitle %> </p>
+    </div>
   </div>
   <% if (is_post()) { %>
-    <%- partial("_partial/post-meta") %> 
+    <div class="mt-3 px-3">
+      <%- partial("_partial/post-meta", { post: page }) %> 
+    </div>
   <% } %>  
   <% if (is_home()) { %>
     <nav class="absolute right-0 bottom-0 p-8">
@@ -42,18 +39,14 @@
 </header>
 
 <script>
-  var typed = new Typed('#typed-title', {
-    // "<%- page.typedTitle %>&nbsp;",
-    strings: [
-      '12344444'
-    ],
-    cursorChar: "_",
-    typeSpeed: 80,
-    loop: false,
-  });
-  typed.stop();
-  setTimeout(() => {
-      console.log(typed)
-      typed.start()
-    }, 2000)
+  window.addEventListener('load', function () {
+    setTimeout(function () {
+      var typed = new Typed('#typed-title', {
+        stringsElement: '#typed-strings',
+        cursorChar: "_",
+        typeSpeed: 40,
+        loop: false,
+      });
+    }, 500)
+  })
 </script>

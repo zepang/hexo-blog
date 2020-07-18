@@ -17,23 +17,7 @@
             <% } %>
             <div title=<%= excerpt %> class="desc block w-full mt-2 mb-auto text-gray-600 text-base leading-relaxed tracking-wider font-medium"><%= excerpt %></div>
             <div class="flex text-gray-600 text-base font-medium">
-              <div class="date"><%- date(post.date) %></div>
-              <% if(post.categories.length > 0) { %>
-                <div class="post-meta">
-                  <i class="iconfont icon-category"></i>
-                  <% post.categories.each(function(cate){ %>
-                    <a href="<%= url_for(cate.path) %>"><%- cate.name %></a>
-                  <% }) %>
-                </div>
-              <% } %>
-              <% if(post.tags.length > 0) { %>
-                <div class="post-meta">
-                  <i class="iconfont icon-tags"></i>
-                  <% post.tags.each(function(tag){ %>
-                    <a href="<%= url_for(tag.path) %>"><%- tag.name %></a>
-                  <% }) %>
-                </div>
-              <% } %>
+              <%- partial('_partial/post-meta', { post: post, categories: post.categories }) %> 
             </div>
           </div>
         </li>

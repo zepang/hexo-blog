@@ -1,3 +1,17 @@
+#post-page
+  #post-aside
+    min-width 220px
+    transition min-width .25s ease-in-out
+  #post-aside.hide
+    min-width 0
+    width 0
+    overflow hidden
+    padding 0
+    bottom 0
+
+  #post-aside.hide + div #toc-toggle-btn
+    color highlight-color
+
 .markdown-article
   footer
     .post-next 
@@ -11,7 +25,6 @@
         white-space: nowrap;
 
 #post-toc
-  min-width 200px
   position sticky
   top 60px
   .toc-child
