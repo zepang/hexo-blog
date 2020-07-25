@@ -1,26 +1,69 @@
-<nav id="page-nav-wrapper" class="w-full">
-  <ul class="nav-list px-10 shadow-sm">
-    <li class="nav-item">
-      <a href="/" class="logo text-white">
-        <h1 class="text-4xl">zpo.blog</h1>
-      </a>
-    </li>
-    <% for (const menu in menus) { %>
-      <% if (menus.hasOwnProperty(menu)) { %>
-        <% const current = menus[menu] %>
-        <li class="nav-item">
-          <% if (is_current(current.url)) { %>
-            <a href=<%= current.url %> class="shadow rounded-full text-base inline-block py-2 px-6 mx-1 text-gray-400 is_current"><%= current.cn %></a>
-          <% } else { %>
-            <a href=<%= current.url %> class="shadow rounded-full text-base inline-block py-2 px-6 mx-1 text-gray-400"><%= current.cn %></a>
-          <% } %>
-        </li>
+<div class="h-0" id="nav-top"></div>
+<nav id="page-nav-wrapper" class="w-full flex justify-between px-4 sm:px-12">
+  <a href="/" class="logo text-white text-4xl">
+    zpo.blog
+  </a>
+  <div class="right ml-auto flex items-center">
+    <ul class="nav-list flex shadow-sm items-center">
+      <% for (const menu in menus) { %>
+        <% if (menus.hasOwnProperty(menu)) { %>
+          <% const current = menus[menu] %>
+          <li class="nav-item">
+            <% if (is_current(current.url)) { %>
+              <a href=<%= current.url %> class="shadow rounded-full text-sm inline-block py-2 px-6 mx-1 text-gray-400 is_current"><%= current.cn %></a>
+            <% } else { %>
+              <a href=<%= current.url %> class="shadow rounded-full text-sm inline-block py-2 px-6 mx-1 text-gray-400"><%= current.cn %></a>
+            <% } %>
+          </li>
+        <% } %>
       <% } %>
-    <% } %>
-    <li>
-      <a href="javascript:;" id="search-local-btn" class="shadow rounded-full text-lg inline-block py-2 px-6 mx-1 text-gray-400">
-        <i class="iconfont icon-search"></i>
-      </a>
-    </li>
-  </ul>
+      <li class="nav-item">
+        <a href="javascript:;" class="search-local-btn shadow rounded-full text-xl inline-block py-2 px-6 mx-1 text-gray-400">
+          <i class="iconfont icon-search"></i>
+        </a>
+      </li>
+    </ul>
+    <a href="#nav-top" id="m-menu-btn" class="shadow rounded-full inline-block  text-gray-400">
+      <i class="iconfont icon-menu"></i>
+    </a>
+  </div>
 </nav>
+<ul id="m-nav-list" class="m-nav-list hide bg-black">
+  <% for (const menu in menus) { %>
+    <% if (menus.hasOwnProperty(menu)) { %>
+      <% const current = menus[menu] %>
+      <li class="border-b border-solid border-gray-700">
+        <% if (is_current(current.url)) { %>
+          <a href=<%= current.url %> class="w-full text-lg inline-block py-4 px-6 text-gray-400 tracking-wide is_current"><%= current.cn %></a>
+        <% } else { %>
+          <a href=<%= current.url %> class="w-full text-lg inline-block py-4 px-6 text-gray-400 tracking-wide"><%= current.cn %></a>
+        <% } %>
+      </li>
+    <% } %>
+  <% } %>
+  <li>
+    <a href="javascript:;" class="search-local-btn text-lg inline-block py-4 px-6 text-gray-400 tracking-wide">
+      搜索
+    </a>
+  </li>
+</ul>
+
+<script>
+  window.addEventListener('load', function () {
+    var menuBtn = document.getElementById('m-menu-btn')
+    var menuList = document.getElementById('m-nav-list')
+    function handleScroll (params) {
+      menuList.classList.add('hide')
+      console.log('123')
+      window.removeEventListener('scroll', handleScroll)
+    }
+    menuBtn.addEventListener('click', function () {
+      if (menuList.classList.contains('hide')) {
+        menuList.classList.remove('hide')
+        window.addEventListener('scroll', handleScroll)
+      } else {
+        menuList.classList.add('hide')
+      }
+    })
+  })
+</script>

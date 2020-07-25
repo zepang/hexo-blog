@@ -10,25 +10,17 @@
     bottom 16%
     right 3%
 
-@media (min-width: 640px) 
-  .posts
-    .post
-      .cover
-        min-width 240px
-        width 25%
-        div.image 
-          padding-top 66.666666%
-  
-
 .posts
   .post  
-    border 1px solid #000
+    flex-direction column
     .cover
+      width 100%
       div.image 
         padding-top 60% 
         background-repeat no-repeat
         background-size 100%
     .info
+      width 100%
       padding 1rem
       a.title 
         overflow: hidden; 
@@ -44,3 +36,17 @@
         display: -webkit-box;
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
+.post + .post 
+  border-top 1px solid #edf2f7
+
+@media (min-width: 640px) 
+  .posts
+    .post
+      flex-direction row
+      .cover
+        min-width 240px
+        width 25%
+        div.image 
+          padding-top 66.666666%
+      .info
+        width auto

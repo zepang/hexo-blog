@@ -1,33 +1,42 @@
 #page-nav-wrapper 
   height 60px
-  background-color transparent
+  background-color primary-color
   position sticky
   top 0
   z-index 500
 
+  a.logo 
+    font-family "aAdistro"
+
+  .icon-menu 
+    font-size 34px
+
+
   .nav-list
+    display none
     height 100%
-    display flex
-    align-items center
-    background-color primary-color
     .nav-item
       list-style none
 
       a
-        text-decoration none
-      a.is_current
-        color: #00c6aa
-
-      a:not(.logo) {
         font-family: "Open Sans", Helvetica, sans-serif;
-        font-size: 12px;
         text-transform: uppercase;
         letter-spacing: .25rem;
-        font-weight 600
-      }
-
-      a.logo 
-        font-family "aAdistro"
+        text-decoration none
 
     .nav-item:nth-child(2)
       margin-left auto
+  @media (min-width 640px)
+    #m-menu-btn
+      display none
+    .nav-list
+      display flex
+.is_current
+  color: #00c6aa
+
+.m-nav-list
+  height 188px
+  transition height .25s ease-in-out
+
+.m-nav-list.hide 
+  height 0

@@ -63,13 +63,16 @@ function initSearchData () {
 }
 
 function initSeachDomListener () {
-  var searchLocalBtn = document.getElementById('search-local-btn')
+  var searchLocalBtns = document.querySelectorAll('.search-local-btn')
   var searchLocal = document.getElementById('search-local')
   var searchInput = searchLocal.querySelector('.search-input')
 
-  searchLocalBtn.addEventListener('click', function (e) {
-    searchLocal.style.display = 'block'
+  Array.from(searchLocalBtns).map(function (searchLocalBtn) {
+    searchLocalBtn.addEventListener('click', function (e) {
+      searchLocal.style.display = 'block'
+    })
   })
+
   searchLocal.addEventListener('click', function (e) {
     if (e.target === this) {
       this.style.display = 'none'

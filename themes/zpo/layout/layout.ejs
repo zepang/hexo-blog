@@ -14,8 +14,10 @@
   <%- partial('_partial/nav', { menus: theme.menus }) %> 
   <%- partial('_partial/search') %> 
   <%- partial('_partial/header') %> 
-  <main class="container m-auto relative -mt-12 xl:px-12 sm:px-8 px-4 py-10 bg-white shadow-sm rounded">
-    <%- body %>
+  <main class="container m-auto relative -mt-12 xl:px-12 sm:px-8 px-4">
+    <section class="content-wrapper xl:px-12 sm:px-8 px-4 bg-white shadow-sm rounded">
+      <%- body %>
+    </section>
   </main>
   <%- partial('_partial/footer') %> 
   <%- partial('_partial/loading') %> 
