@@ -1,6 +1,6 @@
 <% var current = 0 %> 
-<main id="archives-page" class="relative flex flex-col -mt-12 justify-center w-full items-center">
-  <ul class="w-4/5 pb-4 pt-4 px-12 rounded shadow-sm bg-white">
+<section id="archives-page" class="relative flex flex-col -mt-12 justify-center w-full items-center">
+  <ul class="w-full pb-4 pt-4 rounded bg-white">
     <% var year = 0 %> 
     <% page.posts.sort('date', -1).each(function (post) { %>
      <% if(date(post.date, "YYYY") && date(post.date, "YYYY") !== year) { %>
@@ -8,13 +8,13 @@
         <% var archiveYear = '/archives/' +  date(post.date, "YYYY")%> 
         <a href=<%- url_for(archiveYear) %>  class="block mt-8 mb-4 font-bold text-xl pb-4 border-b border-gray-300"><%= date(post.date, "YYYY") %></a>
      <% } %>
-     <li class="flex rounded">
-        <a class="inline-block flex-1 py-2 pl-8" href=<%- url_for(post.path) %> >
-          <span class="inline-block mr-4 text-gray-600"><%= date(post.date, 'MM-DD') %> </span>
-          <span class="font-medium"><%= post.title %></span>
+     <li class="archive flex rounded">
+        <a class="inline-block flex-1 flex py-2" href=<%- url_for(post.path) %> >
+          <span class="date inline-block mr-4 text-gray-600"><%= date(post.date, 'MM-DD') %> </span>
+          <span class="title font-medium text-gray-700"><%= post.title %></span>
         </a>
      </li>
    <% }) %> 
    <%- partial('_partial/paginator') %> 
   </ul>
-</main>
+</section>

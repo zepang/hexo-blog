@@ -34,9 +34,14 @@
 .is_current
   color: #00c6aa
 
-.m-nav-list
-  height 188px
-  transition height .25s ease-in-out
-
-.m-nav-list.hide 
-  height 0
+.m-nav-list-wrapper 
+  position fixed
+  top 60px
+  left 0
+  right 0
+  bottom 0
+  background-color rgba(0, 0, 0, .3)
+  z-index 1000
+  
+.m-nav-list-wrapper.hide 
+  display none

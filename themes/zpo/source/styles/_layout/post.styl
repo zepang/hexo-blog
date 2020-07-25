@@ -1,7 +1,9 @@
 #post-page
   #post-aside
+    display none
     min-width 220px
     transition min-width .25s ease-in-out
+
   #post-aside.hide
     min-width 0
     width 0
@@ -12,10 +14,28 @@
   #post-aside.hide + div #toc-toggle-btn
     color highlight-color
 
+  .toc-toggle-btn-wrapper
+    border-color: #edf2f7;
+
+  .toc-toggle-btn-wrapper
+    display none
+
+    #toc-toggle-btn
+      position: sticky;
+      top: 80px;
+
+  @media (min-width: 760px) 
+    #post-aside
+      display block
+
+    .toc-toggle-btn-wrapper
+      display block
+
 .markdown-article
   footer
     .post-next 
       text-align right
+
     .post-prev, .post-next 
       max-width 50%
       a
@@ -26,15 +46,19 @@
 
 #post-toc
   position sticky
-  top 60px
+  top 80px
+
   .toc-child
     padding .5em 0 
+
   .toc-text
     overflow: hidden; 
     text-overflow: ellipsis;
     white-space: nowrap;
+
   .toc-text, .toc-number 
     font-size 14px
     color #192125
+    
     &:hover 
       color #00C6AA

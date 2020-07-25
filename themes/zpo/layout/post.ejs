@@ -1,6 +1,5 @@
-<main class="relative w-full flex justify-center" id="post-page">
-  <section class="flex w-4/5 md:pr-4 lg:pr-10 py-12 -mt-12 rounded justify-between items-stretch shadow-sm bg-white">
-    <aside id="post-aside" class="border-r border-gray-300 md:pl-4 lg:pl-10">
+  <div id="post-page" class="flex py-12 -mt-12 rounded justify-between items-stretch bg-white">
+    <aside id="post-aside">
       <div id="post-toc" class="pb-6">
         <h4 class="text-xl mb-2"><a href="#">Top：文章目录</a></h4>
         <% if (page.content) { %>
@@ -10,8 +9,8 @@
         <% } %>
       </div>
     </aside>
-    <div class="flex items-center">
-      <span id="toc-toggle-btn" class="bg-gray-300 text-gray-700 py-2 rounded-r text-sm" style="writing-mode:tb-rl; cursor: pointer;">目录</span>
+    <div class="toc-toggle-btn-wrapper border-r flex items-center">
+      <span id="toc-toggle-btn" class="bg-gray-300 text-gray-700 py-2 rounded-l text-sm" style="writing-mode:tb-rl; cursor: pointer;">目录</span>
     </div>
     <article class="markdown-article max-w-screen-lg min-w-0 flex-1 md:pl-6 lg:pl-8 bg-white">
       <%- markdown(page.content) %>
@@ -36,8 +35,7 @@
         </div>
       </footer>
     </article>
-  </section>
-</main>
+  </div>
 
 <script>
   window.addEventListener('load', function () {
