@@ -7,14 +7,16 @@
   <%- css('styles/tailwind') %> 
   <%- css('styles/font') %> 
   <%- css('styles/index') %>
-  <link rel="stylesheet" href="//at.alicdn.com/t/font_1946622_kt46tgs0cga.css">
+  <link rel="stylesheet" href="http://at.alicdn.com/t/font_1946622_hmqit2ddsi6.css">
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
 </head>
 <body class="bg-gray-200 w-full">
   <%- partial('_partial/nav', { menus: theme.menus }) %> 
   <%- partial('_partial/search') %> 
   <%- partial('_partial/header') %> 
-  <%- body %>
+  <main class="container m-auto relative -mt-12 xl:px-12 sm:px-8 px-4 py-10 bg-white shadow-sm rounded">
+    <%- body %>
+  </main>
   <%- partial('_partial/footer') %> 
   <%- partial('_partial/loading') %> 
   <%- js(['javascripts/index']) %> 

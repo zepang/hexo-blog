@@ -1,6 +1,6 @@
 ---
 title: Vue-在列表组件中使用key和Vue-diff算法的一些内容
-img: "https://dummyimage.com/240/160/d6cfd6.png"
+img: "https://dummyimage.com/240x160/d6cfd6.png"
 date: 2019-07-12 10:08:05
 categories: 前端 Vue
 ---

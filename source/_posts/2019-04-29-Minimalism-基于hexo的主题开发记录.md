@@ -1,7 +1,7 @@
 ---
 title: Minimalism-基于hexo的主题开发记录
 date: 2019-04-29 11:37:33
-img: "https://dummyimage.com/240/160/d6cfd6.png"
+img: "https://dummyimage.com/240x160/d6cfd6.png"
 categories: 前端
 ---
 # hexo 主题开发记录

@@ -12,7 +12,7 @@
   <% page.typedTitle = '归档页面' %> 
 <% } %> 
 <header class="relative text-white w-full flex flex-col justify-center items-center  <%= headerClass %>" style="background-color: #192125;">
-  <div class="typed-title-wrapper font-mediumn text-3xl">
+  <div class="typed-title-wrapper font-mediumn text-3xl text-center">
     <span id="typed-title"></span>
     <div id="typed-strings">
       <p><%= page.typedTitle %> </p>
@@ -24,7 +24,7 @@
     </div>
   <% } %>  
   <% if (is_home()) { %>
-    <nav class="absolute right-0 bottom-0 p-8">
+    <nav class="contact absolute right-0 bottom-0 p-8">
       <a href="" title="wechat" class="block my-4 text-sm text-white">
         <i class="iconfont icon-github"></i>
       </a>

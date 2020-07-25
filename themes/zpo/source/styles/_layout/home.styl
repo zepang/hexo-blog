@@ -10,11 +10,26 @@
     bottom 16%
     right 3%
 
+@media (min-width: 640px) 
+  .posts
+    .post
+      .cover
+        min-width 240px
+        width 25%
+        div.image 
+          padding-top 66.666666%
+  
+
 .posts
   .post  
+    border 1px solid #000
     .cover
-      min-width 240px
+      div.image 
+        padding-top 60% 
+        background-repeat no-repeat
+        background-size 100%
     .info
+      padding 1rem
       a.title 
         overflow: hidden; 
         text-overflow: ellipsis;
