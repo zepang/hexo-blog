@@ -1,6 +1,6 @@
-<nav id="page-nav-wrapper" class="w-full flex justify-between px-4 sm:px-12">
+<nav id="page-nav-wrapper" class="w-full flex justify-between items-center px-4 sm:px-12">
   <a href="/" class="logo text-white text-4xl">
-    zpo.blog
+    tomorrow_c.blog
   </a>
   <div class="right ml-auto flex items-center">
     <ul class="nav-list flex shadow-sm items-center">
@@ -50,6 +50,42 @@
 </div>
 
 <script>
+  function debounce (fn) {
+    var timer = null
+    var self = this
+    return function () {
+      timer && clearTimeout(timer)
+      timer = setTimeout(function () {
+        fn.apply(self)
+      }, 100)
+    }
+  }
+
+  function throllte (fn) {
+    var timer = null
+    return function () {
+      if (timer) return
+      timer = setTimeout(function () {
+        fn()
+        clearTimeout(timer)
+        timer = null
+      }, 100)
+    }
+  }
+
+  window.addEventListener('load', function () {
+    var nav = document.getElementById('page-nav-wrapper')
+    function handleScroll (e) {
+      console.log(123)
+      if (Number(nav.offsetTop) > 80 && !nav.classList.contains('sticky')) {
+        nav.classList.add('sticky')
+      } else if (Number(nav.offsetTop) < 80 && nav.classList.contains('sticky')) {
+        nav.classList.remove('sticky')
+      }
+    }
+
+    window.addEventListener('scroll', debounce(handleScroll))
+  })
   window.addEventListener('load', function () {
     var menuBtn = document.getElementById('m-menu-btn')
     var menuList = document.getElementById('m-nav-list-wrapper')
