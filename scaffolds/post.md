@@ -1,5 +1,8 @@
 ---
 title: {{ title }}
 date: {{ date }}
-tags:
+authore: 'zepang'
+img: http://lorempixel.com/1920/1320'
+categories:
+tags: 
 ---

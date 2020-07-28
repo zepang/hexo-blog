@@ -1,7 +1,7 @@
 <section class="posts-section flex relative justify-center flex-wrap">
   <ul class="posts w-full flex-wrap flex justify-center">
     <% page.posts.each(function (post, index) { %>
-      <% const image = post.img || "https://dummyimage.com/240x160/d6cfd6.png" %>
+      <% const image = post.img + '?v=' + Math.random() * Number(Date.now())%>
       <li class="post w-full flex items-center py-10">
         <div class="cover rounded sm:float-left bg-gray-400 shadow-sm">
           <div class="image" style="background-image: url(<%= image %>)"></div>
