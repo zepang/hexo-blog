@@ -43,10 +43,16 @@ $line-numbers
     margin-bottom 1rem
     color #192125
     letter-spacing: .05rem;
+  a
+    word-break break-all
+    color highlight-color
+    text-decoration underline
   code
-    background: color-background
+    background-color #edf2f7
     text-shadow: 0 1px #fff
     padding: 0 0.3em
+    word-break: break-all;
+    border-radius 3px
   pre
     @extend $code-block
     code
