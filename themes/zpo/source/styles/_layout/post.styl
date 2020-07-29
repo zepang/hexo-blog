@@ -2,6 +2,7 @@
   #post-aside
     display none
     min-width 220px
+    max-width 220px
     transition min-width .25s ease-in-out
 
   #post-aside.hide
@@ -45,8 +46,12 @@
         white-space: nowrap;
 
 #post-toc
+  width 100%
+  max-height: 90vh;
   position sticky
   top 80px
+  overflow-y: auto;
+  overflow-x: hidden;
 
   .toc-child
     padding .5em 0 
