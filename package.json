@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "hexo server --debug --port 5000",
+    "dev": "hexo server --debug --port 4000",
     "build": "hexo generate",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
